@@ -1,7 +1,11 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import Header from "./comps/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const pop = Poppins({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "test next 13",
@@ -15,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={pop.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
