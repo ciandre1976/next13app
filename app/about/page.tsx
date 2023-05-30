@@ -1,6 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
+export const metadata = {
+  title: "aBOUT pAGE",
+};
+
 export default function About() {
   return (
     <div className="bg-gray-700 h-100 justify-center h-screen ">
